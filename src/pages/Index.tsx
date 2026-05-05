@@ -397,11 +397,17 @@ const Index = () => {
                 <div className="flex items-start gap-3"><Phone className="h-5 w-5 text-primary mt-0.5" /><span>+91 98765 43210</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-8">
-                <Button className="bg-gradient-sunset text-primary-foreground hover:opacity-90 shadow-glow">
-                  <Phone className="h-4 w-4 mr-2" /> Call to Order
+                <Button asChild className="bg-gradient-sunset text-primary-foreground hover:opacity-90 shadow-glow">
+                  <a href="tel:+919876543210"><Phone className="h-4 w-4 mr-2" /> Call to Order</a>
                 </Button>
-                <Button variant="outline" className="border-border/60">
-                  <Instagram className="h-4 w-4 mr-2" /> @cruisekitchen
+                <Button asChild variant="outline" size="icon" className="border-border/60">
+                  <a href="https://instagram.com/cruisekitchen" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram className="h-4 w-4" /></a>
+                </Button>
+                <Button asChild variant="outline" size="icon" className="border-border/60">
+                  <a href="https://twitter.com/cruisekitchen" target="_blank" rel="noreferrer" aria-label="Twitter"><Twitter className="h-4 w-4" /></a>
+                </Button>
+                <Button asChild variant="outline" size="icon" className="border-border/60">
+                  <a href="https://facebook.com/cruisekitchen" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-4 w-4" /></a>
                 </Button>
               </div>
             </div>
@@ -420,7 +426,12 @@ const Index = () => {
       <footer className="border-t border-border py-10 mt-12">
         <div className="container flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p className="font-display text-base">Cruise Kitchen · Taste the journey.</p>
-          <p>© {new Date().getFullYear()} Cruise Kitchen. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <a href="https://instagram.com/cruisekitchen" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-foreground transition-smooth"><Instagram className="h-4 w-4" /></a>
+            <a href="https://twitter.com/cruisekitchen" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:text-foreground transition-smooth"><Twitter className="h-4 w-4" /></a>
+            <a href="https://facebook.com/cruisekitchen" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-foreground transition-smooth"><Facebook className="h-4 w-4" /></a>
+          </div>
+          <p>© {new Date().getFullYear()} Cruise Kitchen</p>
         </div>
       </footer>
     </div>
