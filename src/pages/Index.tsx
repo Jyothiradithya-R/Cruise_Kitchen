@@ -270,6 +270,115 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Order Online */}
+      <section id="order" className="py-24">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Order Online</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold">
+              Order ahead. <span className="text-gradient-sunset">Skip the wait.</span>
+            </h2>
+            <p className="text-muted-foreground mt-4">Pick up at the truck or get it delivered to your door.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {/* Direct */}
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card flex flex-col">
+              <div className="h-12 w-12 rounded-full bg-gradient-sunset flex items-center justify-center mb-4 shadow-glow">
+                <ShoppingBag className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-1">Order Direct</h3>
+              <p className="text-xs uppercase tracking-wider text-secondary mb-3">Pickup · No fees</p>
+              <p className="text-sm text-muted-foreground mb-6 flex-1">Call or WhatsApp us to place your order. Pay & collect at the truck — fresh and hot.</p>
+              <div className="flex flex-col gap-2">
+                <Button asChild className="bg-gradient-sunset text-primary-foreground hover:opacity-90 w-full">
+                  <a href="tel:+919876543210"><Phone className="h-4 w-4 mr-2" /> Call to Order</a>
+                </Button>
+                <Button asChild variant="outline" className="border-border/60 w-full">
+                  <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">WhatsApp Us</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Swiggy */}
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card flex flex-col">
+              <div className="h-12 w-12 rounded-full bg-orange-500/15 flex items-center justify-center mb-4">
+                <span className="font-display font-black text-orange-400 text-lg">S</span>
+              </div>
+              <h3 className="font-display text-xl font-bold mb-1">Swiggy</h3>
+              <p className="text-xs uppercase tracking-wider text-secondary mb-3">Delivery · 20-30 min</p>
+              <p className="text-sm text-muted-foreground mb-6 flex-1">Order our full menu on Swiggy and get it delivered to your doorstep.</p>
+              <Button asChild variant="outline" className="border-border/60 w-full">
+                <a href="https://www.swiggy.com" target="_blank" rel="noreferrer">
+                  Order on Swiggy <ExternalLink className="h-4 w-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+
+            {/* Zomato */}
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card flex flex-col">
+              <div className="h-12 w-12 rounded-full bg-red-500/15 flex items-center justify-center mb-4">
+                <span className="font-display font-black text-red-400 text-lg">Z</span>
+              </div>
+              <h3 className="font-display text-xl font-bold mb-1">Zomato</h3>
+              <p className="text-xs uppercase tracking-wider text-secondary mb-3">Delivery · 25-35 min</p>
+              <p className="text-sm text-muted-foreground mb-6 flex-1">Browse, order, and track your Cruise Kitchen meal live on Zomato.</p>
+              <Button asChild variant="outline" className="border-border/60 w-full">
+                <a href="https://www.zomato.com" target="_blank" rel="noreferrer">
+                  Order on Zomato <ExternalLink className="h-4 w-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Merch */}
+      <section id="merch" className="py-24 bg-muted/30">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Spiritwear & Swags</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold">
+              Wear the <span className="text-gradient-sunset">journey</span>.
+            </h2>
+            <p className="text-muted-foreground mt-4">Reppin' Cruise Kitchen — comfort you'll love, quality you can trust.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+            <div className="rounded-3xl overflow-hidden border border-border shadow-card bg-background">
+              <img src={merchPoster} alt="Cruise Kitchen merchandise" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {[
+                  { n: "Coffee Mug", p: "₹100 – ₹180" },
+                  { n: "Hoodie", p: "₹200 – ₹250" },
+                  { n: "Caps", p: "₹100 – ₹160" },
+                  { n: "T-Shirts", p: "₹150 – ₹220" },
+                  { n: "Shorts", p: "₹150 – ₹220" },
+                  { n: "Stickers", p: "₹10 – ₹20" },
+                ].map((m) => (
+                  <div key={m.n} className="rounded-xl border border-border bg-card p-4 shadow-card">
+                    <p className="font-display text-lg font-bold">{m.n}</p>
+                    <p className="text-sm text-secondary font-semibold">{m.p}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild className="bg-gradient-sunset text-primary-foreground hover:opacity-90 shadow-glow">
+                  <a href="https://wa.me/919876543210?text=Hi%20Cruise%20Kitchen%2C%20I%27d%20like%20to%20order%20merch" target="_blank" rel="noreferrer">
+                    <Shirt className="h-4 w-4 mr-2" /> Order Merch
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="border-border/60">
+                  <a href={merchPoster} target="_blank" rel="noreferrer">View Full Catalogue</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Find Us */}
       <section id="find" className="py-24">
         <div className="container">
