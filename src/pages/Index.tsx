@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Instagram, Phone, Leaf, Drumstick, Coffee, Truck, Heart } from "lucide-react";
+import { MapPin, Clock, Instagram, Phone, Leaf, Drumstick, Coffee, Truck, Heart, ShoppingBag, Twitter, Facebook, ExternalLink, Shirt } from "lucide-react";
 import heroTruck from "@/assets/hero-truck.jpg";
 import dishParatha from "@/assets/dish-paratha.jpg";
 import dishBiryani from "@/assets/dish-biryani.jpg";
 import dishDosa from "@/assets/dish-dosa.jpg";
 import menuPoster from "@/assets/menu-poster.png";
+import merchPoster from "@/assets/merch-poster.png";
 
 const veg = [
   { n: "Aloo Paratha", o: "Punjab", p: 60 },
@@ -70,10 +71,12 @@ const Index = () => {
             <a href="#menu" className="hover:text-foreground transition-smooth">Menu</a>
             <a href="#combos" className="hover:text-foreground transition-smooth">Combos</a>
             <a href="#today" className="hover:text-foreground transition-smooth">Today's Special</a>
+            <a href="#order" className="hover:text-foreground transition-smooth">Order</a>
+            <a href="#merch" className="hover:text-foreground transition-smooth">Merch</a>
             <a href="#find" className="hover:text-foreground transition-smooth">Find Us</a>
           </div>
-          <Button size="sm" className="bg-gradient-sunset text-primary-foreground hover:opacity-90 shadow-glow">
-            Order Now
+          <Button asChild size="sm" className="bg-gradient-sunset text-primary-foreground hover:opacity-90 shadow-glow">
+            <a href="#order">Order Now</a>
           </Button>
         </nav>
       </header>
